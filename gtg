@@ -1,0 +1,34 @@
++----------------+          +---------------------+          +----------------+
+|   Categories   |          |      Products       |          |    Customers   |
++----------------+          +---------------------+          +----------------+
+| CategoryID (PK)|<---------| ProductID (PK)      |          | CustomerID (PK)|
+| CategoryName   |          | Name                |          | FirstName      |
++----------------+          | Description         |          | LastName       |
+                           | Price               |          | Email          |
+                           | StockQuantity       |          | Password       |
+                           | CategoryID (FK)     |          | Address        |
+                           +---------------------+          | PhoneNumber    |
+                                                             +----------------+
+           ^
+           |
+           |
++----------------+
+|     Orders     |
++----------------+
+| OrderID (PK)   |
+| CustomerID (FK)|
+| OrderDate      |
+| TotalAmount    |
++----------------+
+           ^
+           |
+           |
++---------------------+
+|    OrderDetails    |
++---------------------+
+| OrderDetailID (PK) |
+| OrderID (FK)       |
+| ProductID (FK)     |
+| Quantity           |
+| Subtotal           |
++---------------------+
